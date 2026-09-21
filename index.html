@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>LIHCC Cath Lab Discharge Guide</title>
+<meta name="description" content="Patient discharge instructions and home-care guide after a cardiac catheterization (Cath Lab) procedure at LIHCC." />
+<meta name="theme-color" content="#0b3d63" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Cath Lab Discharge" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="app-header">
+  <div class="app-header__brand">
+    <img src="icons/icon-192.png" alt="" class="app-header__logo" />
+    <div>
+      <p class="app-header__org">LIHCC</p>
+      <h1 class="app-header__title">Cath Lab Discharge Guide</h1>
+    </div>
+  </div>
+  <button id="install-btn" class="btn btn--ghost" hidden>Install App</button>
+</header>
+
+<div id="offline-banner" class="banner banner--offline" role="status" hidden>
+  You're offline. Showing your saved discharge guide.
+</div>
+
+<main id="main">
+  <section class="hero card">
+    <h2>Welcome home</h2>
+    <p>
+      This guide summarizes what to expect and how to care for yourself after your
+      cardiac catheterization procedure. It does not replace instructions from your
+      care team &mdash; always follow what your doctor or nurse told you at discharge.
+    </p>
+    <div class="hero__meta">
+      <label for="access-site">Puncture site:</label>
+      <select id="access-site">
+        <option value="groin">Groin (femoral)</option>
+        <option value="wrist">Wrist (radial)</option>
+        <option value="arm">Arm (brachial)</option>
+        <option value="neck">Neck (jugular)</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="card card--alert">
+    <h2>⚠️ Call 911 immediately if you have</h2>
+    <ul class="checklist" data-checklist="emergency">
+      <li>Chest pain, pressure, or tightness</li>
+      <li>Shortness of breath or trouble breathing</li>
+      <li>Sudden numbness or weakness in your face, arm, or leg, or trouble speaking</li>
+      <li>Bleeding at the puncture site that does not stop with firm pressure</li>
+      <li>Rapid swelling at the puncture site</li>
+      <li>A limb that becomes cold, numb, or discolored</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>📞 Call your care team if you have</h2>
+    <ul class="checklist" data-checklist="doctor">
+      <li>A fever of 100.4°F (38°C) or higher</li>
+      <li>Redness, warmth, swelling, or drainage at the puncture site</li>
+      <li>A bruise that keeps getting bigger</li>
+      <li>Blood in your urine or black/tarry stools</li>
+      <li>An irregular, very slow, or very fast heartbeat</li>
+      <li>Dizziness or lightheadedness</li>
+    </ul>
+    <div class="callout" id="care-team-phone">
+      <strong>LIHCC Care Team:</strong>
+      <a href="tel:+18005550123">(800) 555-0123</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🚗 The first 24 hours</h2>
+    <ul class="checklist" data-checklist="first24">
+      <li>Have a responsible adult stay with you and drive you home</li>
+      <li>Do not drive, operate machinery, or make important decisions</li>
+      <li>Do not drink alcohol</li>
+      <li>Rest and avoid strenuous activity</li>
+      <li>Drink 6–8 glasses of water to help clear the contrast dye</li>
+      <li>Check your temperature if you feel unwell</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>🩹 Wound care</h2>
+    <div id="wound-care-content">
+      <p data-site="groin">
+        Keep the groin site clean and dry. You may remove the dressing the day after your
+        procedure and shower normally. Avoid tub baths, hot tubs, and swimming for 1 week.
+        Avoid bending or stooping from the waist and limit stair climbing for 2–3 days.
+      </p>
+      <p data-site="wrist" hidden>
+        Keep your wrist band on for the time your nurse instructed, then keep the site clean
+        and dry. Do not bend your wrist for 24 hours. Do not soak the site for 3 days. Avoid
+        lifting more than 3–5 lbs with that arm for 1 week.
+      </p>
+      <p data-site="arm" hidden>
+        Use the arm sling for the first 24 hours. Do not raise your arm above your shoulder
+        for 1 week and avoid lifting more than 3–5 lbs with that arm for 1 week.
+      </p>
+      <p data-site="neck" hidden>
+        Keep the site clean and dry. Avoid lifting more than 10 lbs for 3 days and avoid
+        turning your neck sharply.
+      </p>
+    </div>
+    <p>
+      A small bruise or a marble-sized lump is normal. Do not use lotions, powders, or
+      ointments on the site for 1 week.
+    </p>
+    <div class="callout callout--howto">
+      <strong>If the site starts bleeding:</strong> Lie down, apply firm direct pressure for
+      10–15 minutes, and call your care team. If bleeding does not stop, call 911.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🏃 Activity</h2>
+    <ul class="checklist" data-checklist="activity">
+      <li>Do only light activity for 2–3 days</li>
+      <li>No strenuous exercise (running, swimming, cycling, golf, weightlifting) for 1 week</li>
+      <li>Avoid sexual activity for 1 week</li>
+      <li>Climb stairs slowly and only as needed for the first 2 days</li>
+      <li>Ask your care team when you can return to work</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>💊 Medications</h2>
+    <p>
+      Take your medications exactly as listed on your after-visit summary. If you were
+      prescribed a new blood thinner or antiplatelet medicine (such as aspirin or
+      clopidogrel), do not stop taking it without talking to your cardiologist &mdash;
+      stopping suddenly can increase your risk of a blood clot.
+    </p>
+    <div id="med-list" class="med-list" aria-live="polite"></div>
+    <form id="med-form" class="med-form">
+      <input type="text" id="med-name" placeholder="Add a medication (e.g. Aspirin 81mg)" aria-label="Medication name" required />
+      <button type="submit" class="btn">Add</button>
+    </form>
+    <p class="hint">Saved on this device only, for your reference &mdash; not shared with your care team.</p>
+  </section>
+
+  <section class="card">
+    <h2>🥗 Diet &amp; hydration</h2>
+    <ul class="checklist" data-checklist="diet">
+      <li>Drink plenty of water over the next 24 hours</li>
+      <li>Eat a heart-healthy diet, low in salt and saturated fat, unless told otherwise</li>
+      <li>If you have diabetes, resume your usual meal plan and insulin as directed</li>
+      <li>If you take metformin, ask your care team when it is safe to restart it</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>📅 Follow-up</h2>
+    <p>
+      Schedule a follow-up appointment with your cardiologist within 1–2 weeks, or as
+      instructed at discharge. Bring your medication list and any questions about your
+      results.
+    </p>
+    <div class="callout">
+      <strong>Cardiac Rehab Referral:</strong> Ask your care team whether a cardiac
+      rehabilitation program is right for you.
+    </div>
+  </section>
+
+  <footer class="app-footer">
+    <p>
+      Long Island Heart &amp; Cardiovascular Center (LIHCC) &middot; This guide is for
+      general education and does not replace medical advice from your care team.
+    </p>
+    <p class="app-footer__version">Cath Lab Discharge Guide &mdash; works offline once installed</p>
+  </footer>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
